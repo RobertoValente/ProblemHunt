@@ -1,4 +1,4 @@
-<nav class="border-b border-b-base-300">
+<nav class="border-b border-b-base-300 sticky top-0 z-10">
     <div class="navbar bg-base-100">
         <div class="navbar-start">
             <a title="<%= siteInfo.url %>" class="btn btn-ghost text-xl" href="<%= siteInfo.url %>" target="_blank">
@@ -13,37 +13,39 @@
             </a>
         </div>
         <div class="navbar-end gap-1">
-            <a title="<%= lng.navAltDiscord %>" alt class="btn btn-ghost btn-square"><svg role="img" title="<%= lng.navAltDiscord %>" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 640 512"><path d="M524.5 69.8a1.5 1.5 0 0 0 -.8-.7A485.1 485.1 0 0 0 404.1 32a1.8 1.8 0 0 0 -1.9 .9 337.5 337.5 0 0 0 -14.9 30.6 447.8 447.8 0 0 0 -134.4 0 309.5 309.5 0 0 0 -15.1-30.6 1.9 1.9 0 0 0 -1.9-.9A483.7 483.7 0 0 0 116.1 69.1a1.7 1.7 0 0 0 -.8 .7C39.1 183.7 18.2 294.7 28.4 404.4a2 2 0 0 0 .8 1.4A487.7 487.7 0 0 0 176 479.9a1.9 1.9 0 0 0 2.1-.7A348.2 348.2 0 0 0 208.1 430.4a1.9 1.9 0 0 0 -1-2.6 321.2 321.2 0 0 1 -45.9-21.9 1.9 1.9 0 0 1 -.2-3.1c3.1-2.3 6.2-4.7 9.1-7.1a1.8 1.8 0 0 1 1.9-.3c96.2 43.9 200.4 43.9 295.5 0a1.8 1.8 0 0 1 1.9 .2c2.9 2.4 6 4.9 9.1 7.2a1.9 1.9 0 0 1 -.2 3.1 301.4 301.4 0 0 1 -45.9 21.8 1.9 1.9 0 0 0 -1 2.6 391.1 391.1 0 0 0 30 48.8 1.9 1.9 0 0 0 2.1 .7A486 486 0 0 0 610.7 405.7a1.9 1.9 0 0 0 .8-1.4C623.7 277.6 590.9 167.5 524.5 69.8zM222.5 337.6c-29 0-52.8-26.6-52.8-59.2S193.1 219.1 222.5 219.1c29.7 0 53.3 26.8 52.8 59.2C275.3 311 251.9 337.6 222.5 337.6zm195.4 0c-29 0-52.8-26.6-52.8-59.2S388.4 219.1 417.9 219.1c29.7 0 53.3 26.8 52.8 59.2C470.7 311 447.5 337.6 417.9 337.6z"></path></svg></a>
-            <a title="<%= lng.navAltX %>" class="btn btn-ghost btn-square"><svg role="img" title="<%= lng.navAltX %>" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 512 512"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"></path></svg></a>
+            <a title="<%= lng.navAltDiscord %>" alt class="btn btn-ghost btn-square"><svg role="img" title="<%= lng.navAltDiscord %>" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="h-5 w-5" stroke="currentColor" viewBox="0 0 640 512"><path d="M524.5 69.8a1.5 1.5 0 0 0 -.8-.7A485.1 485.1 0 0 0 404.1 32a1.8 1.8 0 0 0 -1.9 .9 337.5 337.5 0 0 0 -14.9 30.6 447.8 447.8 0 0 0 -134.4 0 309.5 309.5 0 0 0 -15.1-30.6 1.9 1.9 0 0 0 -1.9-.9A483.7 483.7 0 0 0 116.1 69.1a1.7 1.7 0 0 0 -.8 .7C39.1 183.7 18.2 294.7 28.4 404.4a2 2 0 0 0 .8 1.4A487.7 487.7 0 0 0 176 479.9a1.9 1.9 0 0 0 2.1-.7A348.2 348.2 0 0 0 208.1 430.4a1.9 1.9 0 0 0 -1-2.6 321.2 321.2 0 0 1 -45.9-21.9 1.9 1.9 0 0 1 -.2-3.1c3.1-2.3 6.2-4.7 9.1-7.1a1.8 1.8 0 0 1 1.9-.3c96.2 43.9 200.4 43.9 295.5 0a1.8 1.8 0 0 1 1.9 .2c2.9 2.4 6 4.9 9.1 7.2a1.9 1.9 0 0 1 -.2 3.1 301.4 301.4 0 0 1 -45.9 21.8 1.9 1.9 0 0 0 -1 2.6 391.1 391.1 0 0 0 30 48.8 1.9 1.9 0 0 0 2.1 .7A486 486 0 0 0 610.7 405.7a1.9 1.9 0 0 0 .8-1.4C623.7 277.6 590.9 167.5 524.5 69.8zM222.5 337.6c-29 0-52.8-26.6-52.8-59.2S193.1 219.1 222.5 219.1c29.7 0 53.3 26.8 52.8 59.2C275.3 311 251.9 337.6 222.5 337.6zm195.4 0c-29 0-52.8-26.6-52.8-59.2S388.4 219.1 417.9 219.1c29.7 0 53.3 26.8 52.8 59.2C470.7 311 447.5 337.6 417.9 337.6z"></path></svg></a>
+            <a title="<%= lng.navAltX %>" class="btn btn-ghost btn-square"><svg role="img" title="<%= lng.navAltX %>" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="h-5 w-5" stroke="currentColor" viewBox="0 0 512 512"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"></path></svg></a>
             <a title="<%= lng.navTxtFeedback %>" class="btn font-bold text-base"><%= lng.navTxtFeedback %></a>
             <a title="<%= lng.navAltAddBtn %>" class="btn btn-neutral font-bold"><svg role="img" title="<%= lng.navAltAddBtn %>" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg></a>
         </div>
     </div>
 </nav>
 
-<div class="m-2 bg-base-200 rounded-md border">
-    <div class="navbar min-h-0 max-h-14">
-        <div class="grow-0 hidden min-[475px]:flex">
-            <span class="text-xl pl-2"><%= lng.navTxtFilder %></span>
-        </div>
-        <div class="grow mx-3">
-            <select id="langFilter" class="select select-sm select-bordered max-w-xs">
-                <option value="0" selected><%= lng.navDropdownDefault %></option>
-                <option value="en-US"><%= lng.navDropdownOpt1 %></option>
-                <option value="pt-PT"><%= lng.navDropdownOpt2 %></option>
-                <option value="other"><%= lng.navDropdownOpt3 %></option>
-            </select>
-        </div>
-        <div class="grow-0 pr-2">
-            <a id="clearFilter" role="img" title="<%= lng.navAltClearFilters %>" class="btn btn-ghost btn-square btn-sm"><svg xmlns="http://www.w3.org/2000/svg" fill="none" class="h-5 w-5" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5" ><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" /></svg></a>
-        </div>
-
-        <div class="grow-0 border-l-2 border-l-base-300">
-            <label title="<%= lng.navAltChangeDisplayFormatList %>" id="displayFormatList" class="btn btn-md btn-square btn-ghost swap swap-rotate ml-1">
-                <input type="checkbox" id="typeDisplayFormatList" value="list" />
-                <!-- Icon: Square List 2x2 --> <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="swap-on h-7 w-7" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6ZM3.75 15.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18a2.25 2.25 0 0 1-2.25 2.25H6A2.25 2.25 0 0 1 3.75 18v-2.25ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25a2.25 2.25 0 0 1-2.25-2.25V6ZM13.5 15.75a2.25 2.25 0 0 1 2.25-2.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-2.25A2.25 2.25 0 0 1 13.5 18v-2.25Z" /></svg>
-                <!-- Icon: Rectangle List --> <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="swap-off h-7 w-7" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5" ><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 0 1 0 3.75H5.625a1.875 1.875 0 0 1 0-3.75Z" /></svg>
-            </label>
+<div class="max-w-screen-lg m-auto p-2">
+    <div class="m-2 bg-base-200 rounded-md border">
+        <div class="navbar min-h-0 max-h-14">
+            <div class="grow-0 hidden min-[475px]:flex">
+                <span class="text-xl pl-2"><%= lng.navTxtFilder %></span>
+            </div>
+            <div class="grow mx-3">
+                <select id="langFilter" class="select select-sm select-bordered max-w-xs">
+                    <option value="0" selected><%= lng.navDropdownDefault %></option>
+                    <option value="en-US"><%= lng.navDropdownOpt1 %></option>
+                    <option value="pt-PT"><%= lng.navDropdownOpt2 %></option>
+                    <option value="other"><%= lng.navDropdownOpt3 %></option>
+                </select>
+            </div>
+            <div class="grow-0 pr-2">
+                <a id="clearFilter" role="img" title="<%= lng.navAltClearFilters %>" class="btn btn-ghost btn-square btn-sm"><svg xmlns="http://www.w3.org/2000/svg" fill="none" class="h-5 w-5" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5" ><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" /></svg></a>
+            </div>
+    
+            <div class="grow-0 border-l-2 border-l-base-300">
+                <label title="<%= lng.navAltChangeDisplayFormatList %>" id="displayFormatList" class="btn btn-md btn-square btn-ghost swap swap-rotate ml-1">
+                    <input type="checkbox" id="typeDisplayFormatList" value="list" />
+                    <!-- Icon: Square List 2x2 --> <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="swap-on h-7 w-7" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6ZM3.75 15.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18a2.25 2.25 0 0 1-2.25 2.25H6A2.25 2.25 0 0 1 3.75 18v-2.25ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25a2.25 2.25 0 0 1-2.25-2.25V6ZM13.5 15.75a2.25 2.25 0 0 1 2.25-2.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-2.25A2.25 2.25 0 0 1 13.5 18v-2.25Z" /></svg>
+                    <!-- Icon: Rectangle List --> <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="swap-off h-7 w-7" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5" ><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 0 1 0 3.75H5.625a1.875 1.875 0 0 1 0-3.75Z" /></svg>
+                </label>
+            </div>
         </div>
     </div>
 </div>
