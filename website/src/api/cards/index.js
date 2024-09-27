@@ -13,8 +13,6 @@ router.get('/', async(req, res) => {
     listAllProblemsCard().then((result) => {
         let { status, response } = result;
 
-        console.log(response);
-
         //-> If the Request was Successful:
         if(status === 1) return res.render('problemCards', {
             data: response.documents,
