@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt" data-theme="light" class="m-0 p-0">
+    <%- 
+        include('head', { 
+            additionalScripts: [
+                "https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js",
+                "/scripts/filterManagement.js",
+                "/scripts/listCards.js",
+            ],
+        });
+    %>
+    <body class="font-default">
+        <div class="max-w-screen-sm m-auto"><%- include('header', {siteInfo: siteInfo, lng: lng}); %></div>
+        <div class="max-w-screen-lg m-auto">
+            <div id="content" class="content m-4 mt-6 text-center">
+
+                <div class="w-full text-center pt-8">
+                    <span class="loading loading-spinner loading-lg inline-block"></span>
+                    <p><%= lng.msgGeneralLoading %></p>
+                </div>
+
+            </div>
+        </div>
+        <div><%- include('footer'); %></div>
+    </body>
+</html>

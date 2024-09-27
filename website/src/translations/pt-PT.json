@@ -1,0 +1,16 @@
+{
+    "msgGeneralError": "Ocorreu um erro. Por favor, envie-nos um Feedback para resolvermos.",
+    "msgGeneralLoading": "A carregar...",
+    "navAltLogo": "Logo do site",
+    "navAltDiscord": "Logotipo do Discord",
+    "navAltX": "Logotipo do X",
+    "navTxtFeedback": "Feedback",
+    "navAltAddBtn": "Criar um post",
+    "navTxtFilter": "Filtros:",
+    "navDropdownDefault": "Escolha um Idioma",
+    "navDropdownOpt1": "Inglês",
+    "navDropdownOpt2": "Português",
+    "navDropdownOpt3": "Outro",
+    "navAltClearFilters": "Limpar Filtros",
+    "navAltChangeDisplayFormatList": "Altere para Visualização em Lista ou Visualização em Grade"
+}

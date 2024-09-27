@@ -1,0 +1,16 @@
+{
+    "msgGeneralError": "An error occurred. Please send us a Feedback to solve it.",
+    "msgGeneralLoading": "Loading...",
+    "navAltLogo": "Logo of the website",
+    "navAltDiscord": "Logo of Discord",
+    "navAltX": "Logo of X",
+    "navTxtFeedback": "Feedback",
+    "navAltAddBtn": "Create a new post",
+    "navTxtFilter": "Filters:",
+    "navDropdownDefault": "Choose a Language",
+    "navDropdownOpt1": "English",
+    "navDropdownOpt2": "Portuguese",
+    "navDropdownOpt3": "Other",
+    "navAltClearFilters": "Clear Filters",
+    "navAltChangeDisplayFormatList": "Change to List View or Grid View"
+}
