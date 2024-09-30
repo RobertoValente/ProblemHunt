@@ -1,5 +1,5 @@
 {
-    "msgGeneralError": "An error occurred. Please send us a Feedback to solve it.",
+    "msgGeneralError": "An error occurred. Please contact us to be solved.",
     "msgGeneralLoading": "Loading...",
     "cardAltBstButton": "This post is Boosted!",
     "cardAltBstIcon": "Boosted Icon",
@@ -19,7 +19,7 @@
     "navAltLogo": "Logo of the website",
     "navAltDiscord": "Logo of Discord",
     "navAltX": "Logo of X",
-    "navTxtFeedback": "Feedback",
+    "navTxtContact": "Contact",
     "navAltAddBtn": "Create a new post",
     "navTxtFilter": "Filters:",
     "navDropdownDefault": "Choose a Language",
@@ -27,5 +27,7 @@
     "navDropdownOpt2": "Portuguese",
     "navDropdownOpt3": "Other",
     "navAltClearFilters": "Clear Filters",
-    "navAltChangeDisplayFormatList": "Change to List View or Grid View"
+    "navAltSearchBtn": "Search with filters applied",
+    "navAltChangeDisplayFormatList": "Change to List View or Grid View",
+    "msgNoDataFound": "No result found with the applied filters!"
 }

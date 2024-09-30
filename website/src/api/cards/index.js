@@ -5,13 +5,21 @@ const { addProblemCard, listAllProblemsCard } = require('../../functions/appwrit
 
 router.get('/', async(req, res) => {
     //-> Get the Language:
-    let language = req.acceptsLanguages('en-US', 'pt-PT', 'pt-BR');
-    if(language === 'pt-BR') language = 'pt-PT';
-    if(!language) language = 'en-US';
-    const lngSource = require(path.join(__dirname + `./../../translations/${language}.json`));
+    let clientLanguage = req.acceptsLanguages('en-US', 'pt-PT', 'pt-BR');
+    if(clientLanguage === 'pt-BR') clientLanguage = 'pt-PT';
+    if(!clientLanguage) clientLanguage = 'en-US';
+    const lngSource = require(path.join(__dirname + `./../../translations/${clientLanguage}.json`));
 
-    listAllProblemsCard().then((result) => {
+    //-> Get the Language from the Query:
+    let lang = req.query.lang || "0";
+    if(lang !== 'en-US' && lang !== 'pt-PT' && lang !== 'other') lang = '0';
+
+    //-> Execute the Query/Request:
+    listAllProblemsCard(lang).then((result) => {
         let { status, response } = result;
+
+        //-> If the Request was Successful (and return 0 results):
+        if(response.total === 0) return res.send(lngSource.msgNoDataFound);
 
         //-> If the Request was Successful:
         if(status === 1) return res.render('problemCards', {

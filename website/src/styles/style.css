@@ -2025,15 +2025,6 @@ html{
   padding: 0px;
 }
 
-.kbd-xs{
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
-  font-size: 0.75rem;
-  line-height: 1rem;
-  min-height: 1.2em;
-  min-width: 1.2em;
-}
-
 .kbd-sm{
   padding-left: 0.25rem;
   padding-right: 0.25rem;
@@ -2180,6 +2171,11 @@ html{
   display: none;
 }
 
+.size-6{
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
 .h-5{
   height: 1.25rem;
 }
@@ -2236,10 +2232,6 @@ html{
   max-width: 20rem;
 }
 
-.max-w-\[420px\]{
-  max-width: 420px;
-}
-
 .flex-1{
   flex: 1 1 0%;
 }
@@ -2254,10 +2246,6 @@ html{
 
 .grow-0{
   flex-grow: 0;
-}
-
-.flex-wrap{
-  flex-wrap: wrap;
 }
 
 .items-center{
@@ -2386,38 +2374,12 @@ html{
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-@media (max-width: 475px){
-  .max-\[475px\]\:m-4{
-    margin: 1rem;
-  }
-}
-
-@media (max-width: 474px){
-  .max-\[474px\]\:m-4{
-    margin: 1rem;
-  }
-}
-
 @media (min-width: 475px){
-  .min-\[475px\]\:m-4{
-    margin: 1rem;
-  }
-
-  .min-\[475px\]\:m-auto{
-    margin: auto;
-  }
-
   .min-\[475px\]\:flex{
     display: flex;
   }
 
   .min-\[475px\]\:contents{
     display: contents;
-  }
-}
-
-@media (min-width: 640px){
-  .sm\:max-w-\[600px\]{
-    max-width: 600px;
   }
 }

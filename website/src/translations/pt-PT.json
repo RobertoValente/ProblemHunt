@@ -1,5 +1,5 @@
 {
-    "msgGeneralError": "Ocorreu um erro. Por favor, envie-nos um Feedback para resolvermos.",
+    "msgGeneralError": "Ocorreu um erro. Por favor, contacte-nos para ser resolvido.",
     "msgGeneralLoading": "A carregar...",
     "cardAltBstButton": "Este Post é turbinado!",
     "cardAltBstIcon": "Icone de Turbinado",
@@ -19,7 +19,7 @@
     "navAltLogo": "Logo do site",
     "navAltDiscord": "Logotipo do Discord",
     "navAltX": "Logotipo do X",
-    "navTxtFeedback": "Feedback",
+    "navTxtContact": "Contactar",
     "navAltAddBtn": "Criar um post",
     "navTxtFilter": "Filtros:",
     "navDropdownDefault": "Escolha um Idioma",
@@ -27,5 +27,7 @@
     "navDropdownOpt2": "Português",
     "navDropdownOpt3": "Outro",
     "navAltClearFilters": "Limpar Filtros",
-    "navAltChangeDisplayFormatList": "Altere para Visualização em Lista ou Visualização em Grade"
+    "navAltSearchBtn": "Procurar com os filtros aplicados",
+    "navAltChangeDisplayFormatList": "Altere para Visualização em Lista ou Visualização em Grade",
+    "msgNoDataFound": "Nenhum resultado encontrado com os filtros aplicados!"
 }

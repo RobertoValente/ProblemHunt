@@ -1,5 +1,5 @@
 const { APPWRITE_DATABASE_ID, APPWRITE_COLLECTION_ID, appwriteClient, appwriteDatabases } = require('../index.js');
-const { ID } = require('node-appwrite');
+const { ID, Query } = require('node-appwrite');
 
 async function addProblemCard(description, emailCreator, languageFlag) {
     try {
@@ -16,9 +16,17 @@ async function addProblemCard(description, emailCreator, languageFlag) {
     }
 }
 
-async function listAllProblemsCard() {
+async function listAllProblemsCard(languageFilter) {
     try {
-        let response = await appwriteDatabases.listDocuments(APPWRITE_DATABASE_ID, APPWRITE_COLLECTION_ID);
+        let response;
+        
+        if(languageFilter === "0") {
+            response = await appwriteDatabases.listDocuments(APPWRITE_DATABASE_ID, APPWRITE_COLLECTION_ID);
+        } else {
+            response = await appwriteDatabases.listDocuments(APPWRITE_DATABASE_ID, APPWRITE_COLLECTION_ID, [
+                Query.equal('languageFlag', languageFilter)
+            ]);
+        }
 
         return { status: 1, response: response };
     } catch (AppwriteException) {

@@ -58,8 +58,8 @@ app.use(favicon(path.join(__dirname + '/images/favicon.png')));
 //-> Routes Creation:
 app.use('/api/cards', require('./api/cards/index.js'));
 app.use('/', require('./routes/root.js'));
-app.use((req, res, next) => { res.status(404).send('404: Page not Found'); })
-app.use((err, req, res, next) => { console.log(err); res.status(500).send('500: Internal Server Error'); })
+app.use((req, res, next) => { return res.status(404).send('404: Page not Found'); })
+app.use((err, req, res, next) => { console.log(err); return res.status(500).send('500: Internal Server Error'); })
 
 //-> Start Server:
 let port = process.env.PORT || 3000;

@@ -11,7 +11,7 @@ router.get('/', (req, res) => {
     const lngSource = require(path.join(__dirname + `./../translations/${language}.json`));
 
     //-> Render the Home Page:
-    res.render('home', {
+    return res.render('home', {
         siteInfo: { name: DOMAIN_NAME, url: DOMAIN_URL },
         lng: lngSource,
     });
