@@ -6,3 +6,4 @@ ideias.txt
 # WEBSITE
 website/node_modules
 website/package-lock.json
+website/src/styles/style.css
