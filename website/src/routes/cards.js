@@ -1,14 +1,13 @@
 const router = require('express').Router();
 const path = require('path');
-const { DOMAIN_URL } = require('../../index.js');
-const { addProblemCard, listAllProblemsCard } = require('../../functions/appwrite.js');
+const { addProblemCard, listAllProblemsCard } = require('../functions/appwrite.js');
 
 router.get('/', async(req, res) => {
     //-> Get the Language:
     let clientLanguage = req.acceptsLanguages('en-US', 'pt-PT', 'pt-BR');
     if(clientLanguage === 'pt-BR') clientLanguage = 'pt-PT';
     if(!clientLanguage) clientLanguage = 'en-US';
-    const lngSource = require(path.join(__dirname + `./../../translations/${clientLanguage}.json`));
+    const lngSource = require(path.join(__dirname + `./../translations/${clientLanguage}.json`));
 
     //-> Get the Language from the Query:
     let lang = req.query.lang || "0";
@@ -22,7 +21,7 @@ router.get('/', async(req, res) => {
         if(response.total === 0) return res.send(lngSource.msgNoDataFound);
 
         //-> If the Request was Successful:
-        if(status === 1) return res.render('problemCards', {
+        if(status === 1) return res.render('card', {
             data: response.documents,
             lng: lngSource,
         });

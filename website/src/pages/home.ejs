@@ -4,9 +4,9 @@
         include('head', { 
             additionalScripts: [
                 "https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js",
-                "/scripts/listCards.js",
-                "/scripts/filterManagement.js",
-                "/scripts/problemCardActions.js",
+                "/scripts/getCards.js",
+                "/scripts/manageGeneral.js",
+                "/scripts/cardsAction.js",
             ],
         });
     %>
@@ -14,14 +14,15 @@
         <%- include('nav', {siteInfo: siteInfo, lng: lng}); %>
         <div class="max-w-screen-lg m-auto">
             <div id="content" class="content m-4 mt-1 mb-32 text-center">
-
                 <div class="w-full text-center pt-8">
                     <span class="loading loading-spinner loading-lg inline-block"></span>
                     <p><%= lng.msgGeneralLoading %></p>
                 </div>
-
             </div>
         </div>
         <div><%- include('footer'); %></div>
+        <div id="toastParent" class="fixed bottom-0 w-full m-auto">
+            <div class="m-4"><%- include('toastsWrap', {lng: lng, cookies: cookies}); %></div>
+        </div>
     </body>
 </html>

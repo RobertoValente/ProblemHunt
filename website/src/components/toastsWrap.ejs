@@ -1,0 +1,5 @@
+<% if(cookies.contactStatus === 'success') { %>
+    <%- include('toast', {color: 'success', msg: lng.msgSuccessContact}); %>
+<% } else if(cookies.contactStatus === 'error') { %>
+    <%- include('toast', {color: 'error', msg: lng.msgErrorContact}); %>
+<% } %>

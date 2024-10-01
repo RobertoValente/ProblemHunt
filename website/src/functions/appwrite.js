@@ -21,10 +21,13 @@ async function listAllProblemsCard(languageFilter) {
         let response;
         
         if(languageFilter === "0") {
-            response = await appwriteDatabases.listDocuments(APPWRITE_DATABASE_ID, APPWRITE_COLLECTION_ID);
+            response = await appwriteDatabases.listDocuments(APPWRITE_DATABASE_ID, APPWRITE_COLLECTION_ID, [
+                Query.orderDesc("$createdAt")
+            ]);
         } else {
             response = await appwriteDatabases.listDocuments(APPWRITE_DATABASE_ID, APPWRITE_COLLECTION_ID, [
-                Query.equal('languageFlag', languageFilter)
+                Query.equal('languageFlag', languageFilter),
+                Query.orderDesc("dateCreated")
             ]);
         }
 

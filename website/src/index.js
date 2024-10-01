@@ -25,6 +25,10 @@ module.exports = {
     PORT: process.env.PORT,
     APPWRITE_DATABASE_ID: process.env.APPWRITE_DATABASE_ID,
     APPWRITE_COLLECTION_ID: process.env.APPWRITE_COLLECTION_ID,
+    URL_DISCORD: process.env.URL_DISCORD,
+    URL_X: process.env.URL_X,
+    DISCORD_USER_ID: process.env.DISCORD_USER_ID,
+    DISCORD_WEBHOOK_CONTACT: process.env.DISCORD_WEBHOOK_CONTACT,
     appwriteClient: client,
     appwriteDatabases: databases,
 }
@@ -41,14 +45,17 @@ app.set('views', [ path.join(__dirname, '/pages'), path.join(__dirname, '/compon
 //-> Configure Express (Security):
 app.disable('x-powered-by');
 app.use(rateLimit({ windowMs: 5 * 60 * 1000, max: 80, standardHeaders: true, legacyHeaders: false }));
-app.use(helmet.contentSecurityPolicy({ directives: {
+//-> Solve the issue with the CSP (Content Security Policy) with Modals (openModal();):
+/*app.use(helmet.contentSecurityPolicy({ directives: {
     defaultSrc: ["'self'"],
-    scriptSrc: ["'self'", "https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"],
+    scriptSrc: [
+        "'self'", "https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js",
+    ],
     imgSrc: ["'self'", "blob:", "data:"],
-}}));
+}}));*/
 
 //-> Configure Express (Cookie):
-app.use(cookieParser(process.env.SESSION_SECRET)); //-> https://github.com/expressjs/express/blob/master/examples/cookies/index.js
+app.use(cookieParser(process.env.COOKIE_SECRET));
 
 //-> Configure Express (Others)
 app.use(express.json());
@@ -56,7 +63,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(favicon(path.join(__dirname + '/images/favicon.png')));
 
 //-> Routes Creation:
-app.use('/api/cards', require('./api/cards/index.js'));
+app.use('/cards', require('./routes/cards.js'));
+app.use('/contact', require('./routes/contact.js'));
 app.use('/', require('./routes/root.js'));
 app.use((req, res, next) => { return res.status(404).send('404: Page not Found'); })
 app.use((err, req, res, next) => { console.log(err); return res.status(500).send('500: Internal Server Error'); })
