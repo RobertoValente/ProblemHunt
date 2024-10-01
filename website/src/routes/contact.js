@@ -19,7 +19,7 @@ router.post('/', (req, res) => {
                 fields: [
                     { name: '**Category:**', value: `➜ \`${contactCategory}\`` },
                     { name: '**Email:**', value: `➜ \`${contactEmail}\`` },
-                    { name: '**Message:**', value: `➜ \`${contactMessage}\`` },
+                    { name: '**Message:**', value: `➜ \`${contactMessage.replace(/[`$]/g, '\\$&')}\`` },
                 ]
             }]
         }
