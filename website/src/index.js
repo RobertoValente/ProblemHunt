@@ -22,7 +22,7 @@ module.exports = {
     DOMAIN_NAME: process.env.DOMAIN_NAME,
     DOMAIN_URL: process.env.DOMAIN_URL,
     NODE_ENV: NODE_ENV,
-    PORT: process.env.PORT,
+    WEBSITE_PORT: process.env.WEBSITE_PORT,
     APPWRITE_DATABASE_ID: process.env.APPWRITE_DATABASE_ID,
     APPWRITE_COLLECTION_ID: process.env.APPWRITE_COLLECTION_ID,
     URL_DISCORD: process.env.URL_DISCORD,
@@ -70,7 +70,7 @@ app.use((req, res, next) => { return res.status(404).send('404: Page not Found')
 app.use((err, req, res, next) => { console.log(err); return res.status(500).send('500: Internal Server Error'); })
 
 //-> Start Server:
-let port = process.env.PORT || 3000;
+let port = process.env.WEBSITE_PORT || 3000;
 app.listen(port, () => {
     console.log('-> Running on http://localhost:' + port);
 });
