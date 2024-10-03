@@ -58,7 +58,7 @@
         <h2 class="text-2xl font-bold"><%= lng.navModalTitle %></h3>
         <div class="py-2 text-base">
             <form id="contactForm" method="POST" action="/contact">
-                <label class="form-control w-full max-w-xs">
+                <label class="form-control w-full">
                     <div class="label">
                         <span class="label-text"><%= lng.navModalTxtCategory %></span>
                     </div>
@@ -70,11 +70,11 @@
                     </select>
                 </label>
                 <br>
-                <label class="form-control w-full max-w-xs">
+                <label class="form-control w-full">
                     <div class="label">
                         <span class="label-text"><%= lng.navModalTxtEmail %></span>
                     </div>
-                    <input name="contactEmail" type="email" placeholder="<%= lng.navModalExampleEmail %>" class="input input-bordered w-full max-w-xs" required />
+                    <input name="contactEmail" type="email" placeholder="<%= lng.navModalExampleEmail %>" class="input input-bordered w-full" required />
                 </label>
                 <br>
                 <label class="form-control">
