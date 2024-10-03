@@ -27,7 +27,7 @@ async function listAllProblemsCard(languageFilter) {
         } else {
             response = await appwriteDatabases.listDocuments(APPWRITE_DATABASE_ID, APPWRITE_COLLECTION_ID, [
                 Query.equal('languageFlag', languageFilter),
-                Query.orderDesc("dateCreated")
+                Query.orderDesc("$createdAt")
             ]);
         }
 

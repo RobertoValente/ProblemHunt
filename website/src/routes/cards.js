@@ -29,7 +29,26 @@ router.get('/', async(req, res) => {
         //-> If the Request was Unsuccessful:
         return res.send(lngSource.msgGeneralError);
     });
-    
+});
+
+router.post('/', async(req, res) => {    
+    //-> Get Data from the Form:
+    let { createLanguage, createProblem, createEmail } = req.body;
+
+    //-> Execute the Query/Request:
+    addProblemCard(createProblem, createEmail = null, createLanguage).then((result) => {
+        let { status, response } = result;
+
+        //-> If the Request was Successful:
+        if(status === 1) {
+            res.cookie('createProblemStatus', 'success', { maxAge: 10 * 1000 });
+            return res.redirect('/');
+        }
+
+        //-> If the Request was Unsuccessful:
+        res.cookie('createProblemStatus', 'error', { maxAge: 10 * 1000 });
+        return res.redirect('/');
+    });
 });
 
 module.exports = router;

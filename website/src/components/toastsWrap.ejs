@@ -3,3 +3,9 @@
 <% } else if(cookies.contactStatus === 'error') { %>
     <%- include('toast', {color: 'border-error', msg: lng.msgErrorContact}); %>
 <% } %>
+
+<% if(cookies.createProblemStatus === 'success') { %>
+    <%- include('toast', {color: 'border-success', msg: lng.msgSuccessCreate}); %>
+<% } else if(cookies.createProblemStatus === 'error') { %>
+    <%- include('toast', {color: 'border-error', msg: lng.msgErrorCreate}); %>
+<% } %>
