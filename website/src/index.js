@@ -29,6 +29,7 @@ module.exports = {
     URL_X: process.env.URL_X,
     DISCORD_USER_ID: process.env.DISCORD_USER_ID,
     DISCORD_WEBHOOK_CONTACT: process.env.DISCORD_WEBHOOK_CONTACT,
+    DISCORD_WEBHOOK_REPORT: process.env.DISCORD_WEBHOOK_REPORT,
     appwriteClient: client,
     appwriteDatabases: databases,
 }
@@ -63,7 +64,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use(favicon(path.join(__dirname + '/images/favicon.png')));
 
 //-> Routes Creation:
-app.use('/cards', require('./routes/cards.js'));
+app.use('/cards/like', require('./routes/cards/like/root.js'));
+app.use('/cards/reply', require('./routes/cards/reply/root.js'));
+app.use('/cards/report', require('./routes/cards/report/root.js'));
+app.use('/cards', require('./routes/cards/root.js'));
 app.use('/contact', require('./routes/contact.js'));
 app.use('/', require('./routes/root.js'));
 app.use((req, res, next) => { return res.status(404).send('404: Page not Found'); })

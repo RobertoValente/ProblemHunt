@@ -1,0 +1,47 @@
+<script>
+    $(document).ready(function() {
+        //-> 'Like' Button:
+        $('.likeBtn').click(function(elem) {
+            elem.preventDefault();
+            if($(this).find('svg').css('fill') == 'rgb(255, 0, 0)') return;
+            
+            let btnClicked = $(this);
+            let tempIdent = $(this).parent().parent().parent().find('.identifier').val();
+            $.post({
+                url: '/cards/like',
+                data: { id: tempIdent },
+                success: function(data, status) {
+                    btnClicked.find('svg').css('fill', 'red');
+                },
+                error: function(jqXHR, textStatus, errorThrown) {
+                    btnClicked.find('svg').css('fill', 'red');
+                    setTimeout(() => {
+                        btnClicked.find('svg').css('fill', 'none');
+                    }, 1000);
+                }
+            });
+        });
+
+        //-> 'Report' Button:
+        $('.reportBtn').click(function(elem) {
+            elem.preventDefault();
+            if($(this).find('svg').css('fill') == 'rgb(255, 0, 0)') return;
+
+            let btnClicked = $(this);
+            let tempIdent = $(this).parent().parent().parent().parent().parent().parent().find('.identifier').val();
+            $.post({
+                url: '/cards/report',
+                data: { id: tempIdent },
+                success: function(data, status) {
+                    btnClicked.find('svg').css('fill', 'red');
+                },
+                error: function(jqXHR, textStatus, errorThrown) {
+                    btnClicked.find('svg').css('fill', 'red');
+                    setTimeout(() => {
+                        btnClicked.find('svg').css('fill', 'none');
+                    }, 1000);
+                }
+            });
+        });
+    }) 
+</script>
