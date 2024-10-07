@@ -3,6 +3,7 @@
     "msgSuccessContact": "Mensagem enviada com sucesso!",
     "msgErrorContact": "Ocorreu um erro ao enviar a mensagem. Por favor, tente novamente.",
     "msgSuccessCreate": "Post criado com sucesso!",	
+    "msgExceedLimit": "Excedeu o limite de caracteres.",
     "msgErrorCreate": "Ocorreu um erro ao criar o post. Por favor, contacte-nos para ser resolvido.",
     "msgGeneralLoading": "A carregar...",
     "cardAltBstButton": "Este Post é turbinado!",

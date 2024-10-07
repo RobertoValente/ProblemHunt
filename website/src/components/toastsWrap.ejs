@@ -6,6 +6,8 @@
 
 <% if(cookies.createProblemStatus === 'success') { %>
     <%- include('toast', {color: 'border-success', msg: lng.msgSuccessCreate}); %>
+<% } else if(cookies.createProblemStatus === 'exceedLimitSize') { %>
+    <%- include('toast', {color: 'border-error', msg: lng.msgExceedLimit}); %>
 <% } else if(cookies.createProblemStatus === 'error') { %>
     <%- include('toast', {color: 'border-error', msg: lng.msgErrorCreate}); %>
 <% } %>

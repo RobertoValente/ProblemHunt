@@ -2,7 +2,7 @@
     <div id="cardProblem" class="card bg-base-100 rounded-2xl w-full border mb-4">
         <input class="identifier" type="text" value="<%= data[i]['$id'] %>" disabled hidden>
         <div class="card-body p-4">
-            <span class="text-left"><kbd class="kbd kbd-sm">➜</kbd> <%= data[i].description %></span>
+            <span class="text-left break-words"><kbd class="kbd kbd-sm">➜</kbd> <%= data[i].description %></span>
             <div class="card-actions">
                 <% if(data[i].bstSite) { %>
                     <!-- Boost Button -->

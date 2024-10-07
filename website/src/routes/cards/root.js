@@ -35,6 +35,12 @@ router.post('/', async(req, res) => {
     //-> Get Data from the Form:
     let { createLanguage, createProblem, createEmail } = req.body;
 
+    //-> Check if the Problem is Exceeding the Limit Size:
+    if(createProblem.length > 512) {
+        res.cookie('createProblemStatus', 'exceedLimitSize', { maxAge: 10 * 1000 });
+        return res.redirect('/');
+    }
+
     //-> Execute the Query/Request:
     addProblemCard(createProblem, createEmail = null, createLanguage).then((result) => {
         let { status, response } = result;
