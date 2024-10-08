@@ -11,3 +11,9 @@
 <% } else if(cookies.createProblemStatus === 'error') { %>
     <%- include('toast', {color: 'border-error', msg: lng.msgErrorCreate}); %>
 <% } %>
+
+<% if(cookies.replyStatus === 'success') { %>
+    <%- include('toast', {color: 'border-success', msg: lng.msgSuccessReply}); %>
+<% } else if(cookies.replyStatus === 'error') { %>
+    <%- include('toast', {color: 'border-error', msg: lng.msgErrorReply}); %>
+<% } %>

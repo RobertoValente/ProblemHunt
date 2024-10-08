@@ -13,6 +13,7 @@ router.get('/', (req, res) => {
     //-> Get tempCookies then Delete Cookies:
     let tempContactStatus = req.cookies.contactStatus; res.clearCookie('contactStatus');
     let tempCreateProblemStatus = req.cookies.createProblemStatus; res.clearCookie('createProblemStatus');
+    let tempReplyStatus = req.cookies.replyStatus; res.clearCookie('replyStatus');
 
     //-> Render the Home Page:
     return res.render('home', {
@@ -21,6 +22,7 @@ router.get('/', (req, res) => {
         cookies: {
             contactStatus: tempContactStatus,
             createProblemStatus: tempCreateProblemStatus,
+            replyStatus: tempReplyStatus,
         }
     });
 });

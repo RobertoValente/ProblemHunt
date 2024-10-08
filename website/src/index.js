@@ -30,6 +30,7 @@ module.exports = {
     DISCORD_USER_ID: process.env.DISCORD_USER_ID,
     DISCORD_WEBHOOK_CONTACT: process.env.DISCORD_WEBHOOK_CONTACT,
     DISCORD_WEBHOOK_REPORT: process.env.DISCORD_WEBHOOK_REPORT,
+    DISCORD_WEBHOOK_REPLY: process.env.DISCORD_WEBHOOK_REPLY,
     appwriteClient: client,
     appwriteDatabases: databases,
 }
