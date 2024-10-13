@@ -1,0 +1,9 @@
+# GENERAL
+.env.production
+.env.development
+ideias.txt
+
+# WEBSITE
+website/node_modules
+website/package-lock.json
+website/src/styles/style.css
