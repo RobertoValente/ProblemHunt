@@ -1,8 +1,9 @@
 FROM node:20
-WORKDIR /usr/src/code/app
+WORKDIR /code/app
+
 COPY . .
 RUN npm install
-ARG PORT
-ENV PORT $PORT
-EXPOSE $PORT
+ARG WEBSITE_PORT
+ENV WEBSITE_PORT $WEBSITE_PORT
+EXPOSE $WEBSITE_PORT
 CMD ["node", "start.js"]
