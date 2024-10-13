@@ -1,5 +1,5 @@
 const { NODE_ENV } = require('../../start.js');
-require('dotenv').config({ path: `../.env.${NODE_ENV}` });
+require('dotenv').config({ path: `./.env.${NODE_ENV}` });
 const { sdk, Client, Databases } = require('node-appwrite');
 const express = require('express');
 const app = express();
