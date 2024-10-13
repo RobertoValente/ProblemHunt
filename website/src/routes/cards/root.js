@@ -34,6 +34,7 @@ router.get('/', async(req, res) => {
 router.post('/', async(req, res) => {    
     //-> Get Data from the Form:
     let { createLanguage, createProblem, createEmail } = req.body;
+    if(!createLanguage || !createProblem) return res.status(400).send('Missing Fields');
 
     //-> Check if the Problem is Exceeding the Limit Size:
     if(createProblem.length > 512) {

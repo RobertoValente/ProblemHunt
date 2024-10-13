@@ -3,8 +3,8 @@ const axios = require('axios');
 const { DISCORD_USER_ID, DISCORD_WEBHOOK_REPLY } = require('../../../index.js');
 
 router.post('/', (req, res) => {
-    console.log(req.body);
     let { identifier, replyEmail, replyMessage } = req.body;
+    if(!identifier || !replyEmail || !replyMessage) return res.status(400).send('Missing Fields');
     if(!DISCORD_USER_ID || !DISCORD_WEBHOOK_REPLY) return res.status(500).send('Error');
 
     //-> Send Discord Webhook:

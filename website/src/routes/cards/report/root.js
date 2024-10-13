@@ -4,6 +4,7 @@ const { DISCORD_USER_ID, DISCORD_WEBHOOK_REPORT } = require('../../../index.js')
 
 router.post('/', (req, res) => {
     let { id } = req.body;
+    if(!id) return res.status(400).send('Missing Fields');
     if(!DISCORD_USER_ID || !DISCORD_WEBHOOK_REPORT) return res.status(500).send('Error');
 
     //-> Send Discord Webhook:
