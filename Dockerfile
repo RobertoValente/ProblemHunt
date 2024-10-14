@@ -5,6 +5,7 @@ COPY . .
 
 WORKDIR /app/website
 RUN npm install
+RUN npm run build-css
 
 WORKDIR /app
 ARG WEBSITE_PORT
