@@ -68,7 +68,8 @@ app.use(favicon(path.join(__dirname + '/images/favicon.png')));
 //-> Middleware:
 const middlewareAllowLocal = function(req, res, next) { 
     let host = req.headers.host.split(':')[0];
-    if(host !== 'localhost') return res.send(401);
+    let domainUrl = process.env.DOMAIN_URL.replace('https://', '');
+    if(host !== 'localhost' || host !== domainUrl) return res.send(401);
     
     next();
 };
