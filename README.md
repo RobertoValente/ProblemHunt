@@ -2,7 +2,7 @@
 If you are a Problem Hunter to create Solutions, you really need to check this out! Also, you can share your problems here.
 
 # 🤔 Why I coded it?
-- I really `wanted to try new things` (like Coolify/AppWrite/Docker/etc.) and learn more about configuring a VPS so I thought about a fun idea to develop and just started! Also, I have some Cool Ideas but this is not my Main Project...
+- I really `wanted to try new things` (like Coolify/AppWrite/Docker/etc.) and learn more about configuring a VPS so I thought about a fun idea to develop and just started! Also, I have some cool ideas but this is not my Main Project...
 - So `what about we develop it as a OpenSource Project?`
 
 # 📸 Screenshots
