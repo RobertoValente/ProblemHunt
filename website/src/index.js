@@ -70,7 +70,8 @@ const middlewareAllowLocal = function(req, res, next) {
     let host = req.headers.host.split(':')[0];
     console.log(req.headers.host);
     let domainUrl = process.env.DOMAIN_URL.replace('https://', '');
-    if(host !== 'localhost' || host !== domainUrl) return res.send(401);
+    console.log(host, domainUrl);
+    if(host !== 'localhost' || host !== domainUrl) return res.sendStatus(401);
     
     next();
 };
