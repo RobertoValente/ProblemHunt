@@ -65,7 +65,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(favicon(path.join(__dirname + '/images/favicon.png')));
 
-//-> Middleware:
+//-> Middleware (not in use):
 const middlewareAllowLocal = function(req, res, next) { 
     let host = req.headers.host.split(':')[0];
     console.log(req.headers.host);
@@ -77,11 +77,11 @@ const middlewareAllowLocal = function(req, res, next) {
 };
 
 //-> Routes Creation:
-app.use('/cards/like', middlewareAllowLocal, require('./routes/cards/like/root.js'));
-app.use('/cards/reply', middlewareAllowLocal, require('./routes/cards/reply/root.js'));
-app.use('/cards/report', middlewareAllowLocal, require('./routes/cards/report/root.js'));
+app.use('/cards/like', require('./routes/cards/like/root.js'));
+app.use('/cards/reply', require('./routes/cards/reply/root.js'));
+app.use('/cards/report', require('./routes/cards/report/root.js'));
 app.use('/cards', require('./routes/cards/root.js'));
-app.use('/contact', middlewareAllowLocal, require('./routes/contact.js'));
+app.use('/contact', require('./routes/contact.js'));
 app.use('/', require('./routes/root.js'));
 app.use((req, res, next) => { return res.status(404).send('404: Page not Found'); })
 app.use((err, req, res, next) => { console.log(err); return res.status(500).send('500: Internal Server Error'); })
