@@ -27,5 +27,8 @@
         <div id="toastParent" class="fixed bottom-0 w-full m-auto">
             <div class="m-4"><%- include('toastsWrap', {lng: lng, cookies: cookies}); %></div>
         </div>
+        <% if(cookies.alreadyVisited === "false") { %>
+            <%- include('welcomeMsg', {lng: lng}); %>
+        <% } %>
     </body>
 </html>

@@ -11,9 +11,12 @@ router.get('/', (req, res) => {
     const lngSource = require(path.join(__dirname + `./../translations/${language}.json`));
 
     //-> Get tempCookies then Delete Cookies:
+    let tempAlreadyVisited;
     let tempContactStatus = req.cookies.contactStatus; res.clearCookie('contactStatus');
     let tempCreateProblemStatus = req.cookies.createProblemStatus; res.clearCookie('createProblemStatus');
     let tempReplyStatus = req.cookies.replyStatus; res.clearCookie('replyStatus');
+    tempAlreadyVisited = (req.cookies.alreadyVisited === "true") ? tempAlreadyVisited = "true" : tempAlreadyVisited = "false";
+    if(tempAlreadyVisited === "false") res.cookie('alreadyVisited', "true", { maxAge: 1000 * 60 * 60 * 24 * 365 });
 
     //-> Render the Home Page:
     return res.render('home', {
@@ -23,6 +26,7 @@ router.get('/', (req, res) => {
             contactStatus: tempContactStatus,
             createProblemStatus: tempCreateProblemStatus,
             replyStatus: tempReplyStatus,
+            alreadyVisited: tempAlreadyVisited,
         }
     });
 });
