@@ -12,16 +12,6 @@ If you are a Problem Hunter to create Solutions, you really need to check this o
   <img src="https://imgur.com/jXMZSbX.png" alt="Create a Post - Image" width="35%" height="35%" /> 
 </p>
 
-# 📌 To-Do
-```console
-[] Create Middleware to prevent requests with Postman, etc.
-[] Setup Helmet to prevent XSS, etc.
-[] Setup SMTP Server + Email*
-[] Integrate X/Twitter Bot
-[] Integrate Discord Bot
-```
-**waiting until coolify have a way to self-host smtp server*
-
 # 📌 How to Run
 ```console
 # Clone this repository
