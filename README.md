@@ -7,8 +7,8 @@ If you are a Problem Hunter to create Solutions, you really need to check this o
 
 # 📸 Screenshots
 <p float="center">
-  <img src="https://imgur.com/ahZonOv.png" alt="Home - Image" width="35%" height="35%" />
-  <img src="https://imgur.com/jXMZSbX.png" alt="Create a Post - Image" width="35%" height="35%" /> 
+  <img src="https://imgur.com/ahZonOv.png" alt="Home - Image" width="35%" />
+  <img src="https://imgur.com/jXMZSbX.png" alt="Create a Post - Image" width="35%" /> 
 </p>
 
 # 📌 How to Run
