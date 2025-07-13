@@ -6,7 +6,6 @@ If you are a Problem Hunter to create Solutions, you really need to check this o
 - So `what about we develop it as a OpenSource Project?`
 
 # 📸 Screenshots
-**the Screenshots been in Portuguese, is only a trick to invite you to see the English Version: <a href="https://problemhunt.site" target="_blank">ProblemHunt.site</a> `CTA here? Yes :D`*
 <p float="center">
   <img src="https://imgur.com/ahZonOv.png" alt="Home - Image" width="35%" height="35%" />
   <img src="https://imgur.com/jXMZSbX.png" alt="Create a Post - Image" width="35%" height="35%" /> 
